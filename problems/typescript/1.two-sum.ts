@@ -6,7 +6,7 @@
 
 // @lc code=start
 function twoSum(nums: number[], target: number): number[] {
-
+  
 };
 // @lc code=end
 
