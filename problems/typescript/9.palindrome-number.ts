@@ -10,13 +10,13 @@ function isPalindrome(x: number): boolean {
     return false; // 負数, 1の位が0の数は回文になりえない
   }
 
-  let revertNumber = 0;
+  let revertNumber: number = 0;
   while (x > revertNumber) {
     revertNumber = revertNumber * 10 + x % 10;
-    x /= 10;
+    x = ~~(x / 10); // 少数切り捨てないと例えば11のケースでfalseになる
   }
 
-  return x === revertNumber || x === revertNumber / 10;
+  return x === revertNumber || x === ~~(revertNumber / 10);
 };
 // @lc code=end
 
